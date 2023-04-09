@@ -1,8 +1,8 @@
-import React, { useRef, useEffect } from "react"
+import React, { useRef, useState } from "react"
 import { View, Text, FlatList, StyleSheet, Image, Dimensions } from 'react-native'
 import { Icons } from "../../../Constant/constant"
 
-const { width,height } = Dimensions.get('screen')
+const { width, height } = Dimensions.get('screen')
 
 const Data = [
     { id: 1, image: Icons.banner_1 },
@@ -13,29 +13,27 @@ const Data = [
 
 export default Carousel = (props) => {
     const currentRef = useRef()
+    const [activeIndex, setActiveIndex] = useState(0)
     return (
         <View style={styles.conatiner}>
             <FlatList
+                ref={currentRef}
                 data={Data}
                 horizontal
                 pagingEnabled
                 showsHorizontalScrollIndicator={false}
+                onMomentumScrollEnd={ev => setActiveIndex(Math.floor(ev.nativeEvent.contentOffset.x / Math.floor(width * 0.949)))}
                 keyExtractor={item => item.id}
                 renderItem={({ item, index }) => {
                     return (<View>
                         <Image source={item.image} style={styles.image} />
                     </View>)
                 }}
+                onEndThreshold={0}
             />
-            <Dot data={Data} />
-        </View>
-    )
-}
-
-const Dot = (props) => {
-    return (
-        <View style={styles.dotContainer}>
-            {props.data.map(item => <View style={[styles.dots]} key={item.id} />)}
+            <View style={styles.dotContainer}>
+                {Data.map((item, index) => { return (<View style={[styles.dots, { backgroundColor: activeIndex === index ? "black" : "white" }]} key={item.id} />) })}
+            </View>
         </View>
     )
 }
@@ -50,14 +48,14 @@ const styles = StyleSheet.create({
         height: height * 0.7
     },
     dotContainer: {
-        flexDirection:"row",        
+        flexDirection: "row",
     },
     dots: {
         height: 10,
         width: 10,
         borderWidth: 1,
         borderRadius: 25,
-        margin:10,
+        margin: 10,
     },
- 
+
 })
