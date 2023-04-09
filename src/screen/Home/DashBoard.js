@@ -1,6 +1,7 @@
 import React from 'react'
-import { View, Text, TouchableOpacity,FlatList, ImageBackground, StyleSheet, ScrollView } from 'react-native'
+import { View, Text, TouchableOpacity, FlatList, ImageBackground, StyleSheet, ScrollView } from 'react-native'
 import Header from '../../Component/Header'
+import Carousel from './Component/Carousel'
 
 export default DashBoard = () => {
     return (
@@ -8,8 +9,8 @@ export default DashBoard = () => {
             <View style={styles.header}>
                 <Header />
             </View>
-            <ScrollView>
-                <ImageBackground ></ImageBackground>
+            <ScrollView style={styles.subcontainer}>
+                <Carousel />
             </ScrollView>
         </View>
     )
@@ -18,6 +19,9 @@ export default DashBoard = () => {
 const styles = StyleSheet.create({
     header: {
         position: "absolute",
+    },
+    subcontainer: {
+        marginTop: 40,
+        marginHorizontal: 10
     }
-
 })
