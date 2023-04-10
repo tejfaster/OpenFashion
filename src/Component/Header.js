@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, StyleSheet, Text, TouchableOpacity, Image } from 'react-native'
 import CtsButton from './CtsButton'
-import { Icons } from "../Constant/constant"
+import { Icons } from "../Constant/images"
 
 export default Header = () => {
     return (

@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react"
-import { View, Text, FlatList, StyleSheet, Image, Dimensions } from 'react-native'
-import { Icons } from "../../../Constant/constant"
+import { View, ImageBackground, Text, FlatList, StyleSheet,TouchableOpacity, Dimensions } from 'react-native'
+import { Icons } from "../../../Constant/images"
+import { appfont } from "../../../Constant/fonts"
 
 const { width, height } = Dimensions.get('screen')
 
@@ -24,9 +25,15 @@ export default Carousel = (props) => {
                 showsHorizontalScrollIndicator={false}
                 onMomentumScrollEnd={ev => setActiveIndex(Math.floor(ev.nativeEvent.contentOffset.x / Math.floor(width * 0.949)))}
                 keyExtractor={item => item.id}
-                renderItem={({ item, index }) => {
+                renderItem={({ item}) => {
                     return (<View>
-                        <Image source={item.image} style={styles.image} />
+                        <ImageBackground
+                            source={item.image}
+                            style={styles.image} >
+                            <TouchableOpacity style={styles.explore}>
+                                <Text style={styles.collection}>EXPLORE COLLECTION</Text>
+                            </TouchableOpacity>
+                        </ImageBackground>
                     </View>)
                 }}
                 onEndThreshold={0}
@@ -45,17 +52,32 @@ const styles = StyleSheet.create({
     },
     image: {
         width: width * 0.95,
-        height: height * 0.7
+        height: height * 0.7,
+        alignItems: 'center',
+        justifyContent: "flex-end",
+        paddingBottom:10
     },
     dotContainer: {
         flexDirection: "row",
     },
     dots: {
-        height: 10,
-        width: 10,
+        height: 6,
+        width: 6,
         borderWidth: 1,
         borderRadius: 25,
-        margin: 10,
+        margin: 10,        
     },
-
+    explore: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: 50,
+        width: width * 0.5,
+        backgroundColor: "rgba(0,0,0,0.3)",
+        borderRadius:50
+    },
+    collection:{
+        color:"white",
+        fontFamily:appfont,
+        fontSize:14
+    }
 })
