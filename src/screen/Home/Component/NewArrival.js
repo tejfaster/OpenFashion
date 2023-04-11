@@ -1,11 +1,34 @@
 import React, { useRef, useState } from 'react'
-import { View, Text, Image, StyleSheet, FlatList } from 'react-native'
+import { View, Text, Image, StyleSheet, FlatList, TouchableOpacity } from 'react-native'
 import { appfont } from '../../../Constant/fonts'
 import { Icons } from '../../../Constant/images'
-import { newArrival_Data } from '../../../Constant/constant'
+import { Apparel, height, newArrival_Data, width } from '../../../Constant/constant'
 
-export default NewArrival = () => {
+export default NewArrival = (props) => {
     const [activeIndex, setActiveIndex] = useState(0)
+
+    const renderItem = () => {
+        return (
+            <View style={styles.rowFlatlist}>
+                <FlatList
+                    data={Apparel}
+                    keyExtractor={item => item.id}
+                    numColumns={2}
+                    showsVerticalScrollIndicator={false}
+                    renderItem={({ item }) => {
+                        return (
+                            <View style={styles.apparelcontainer}>
+                                <Image source={item.image} style={styles.apparelimage} />
+                                <Text style={styles.appareltxt}>{item.description}</Text>
+                                <Text style={styles.apparelprice}>${item.price}</Text>
+                            </View>
+                        )
+                    }}
+                />
+            </View>
+        )
+    }
+
     return (
         <View style={styles.container}>
             <View style={styles.header}>
@@ -30,10 +53,13 @@ export default NewArrival = () => {
                 horizontal
                 pagingEnabled
                 showsHorizontalScrollIndicator={false}
-                renderItem={({ item, index }) => {
-
-                }}
+                onMomentumScrollEnd={ev => setActiveIndex(Math.floor(ev.nativeEvent.contentOffset.x / Math.floor(width * 0.949)))}
+                renderItem={({ item, index }) => renderItem(item, index)}
             />
+            <TouchableOpacity onPress={props.onPress} style={styles.expmrButton}>
+                <Text style={styles.expmrtxt}>Explore More</Text>
+                <Image source={Icons.forward_Arrow} style={styles.expmrarw} />
+            </TouchableOpacity>
         </View>
     )
 }
@@ -55,7 +81,8 @@ const styles = StyleSheet.create({
     },
     arrivalcontainer: {
         flexDirection: 'row',
-        justifyContent: "space-evenly"
+        justifyContent: "space-evenly",
+        marginBottom: 10,
     },
     arrivalheader: {
         alignItems: 'center'
@@ -69,5 +96,44 @@ const styles = StyleSheet.create({
         width: 7,
         borderRadius: 25,
         borderWidth: 1
+    },
+    apparelcontainer: {
+        width: width * 0.47,
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    apparelimage: {
+        height: height * 0.3,
+        width: width * 0.47,
+        resizeMode: 'contain'
+    },
+    rowFlatlist: {
+        width: width * 0.949,
+        height: height * 0.725,
+        alignItems: 'center'
+    },
+    appareltxt: {
+        fontFamily: appfont,
+        textAlign: 'center',
+    },
+    apparelprice: {
+        fontFamily: appfont,
+        color: "gold"
+    },
+    expmrButton: {
+        alignItems: 'center',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        marginVertical: 15,
+        marginBottom: 45
+    },
+    expmrtxt: {
+        fontFamily: appfont,
+        fontSize: 20,
+        marginHorizontal: 10
+    },
+    expmrarw: {
+        height: 20,
+        width: 25
     }
 })

@@ -3,16 +3,19 @@ import { View, Text, TouchableOpacity, FlatList, ImageBackground, StyleSheet, Sc
 import Header from '../../Component/Header'
 import Carousel from './Component/Carousel'
 import NewArrival from './Component/NewArrival'
+import Brand from './Component/Brand'
 
 export default DashBoard = () => {
+
     return (
         <View>
             <View style={styles.header}>
                 <Header />
             </View>
-            <ScrollView style={styles.subcontainer}>
+            <ScrollView style={styles.subcontainer} showsVerticalScrollIndicator={false}>
                 <Carousel />
                 <NewArrival />
+                <Brand />
             </ScrollView>
         </View>
     )
