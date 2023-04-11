@@ -1,8 +1,8 @@
 import React, { useRef, useState } from 'react'
 import { View, Text, Image, StyleSheet, FlatList, TouchableOpacity } from 'react-native'
-import { appfont } from '../../../Constant/fonts'
-import { Icons } from '../../../Constant/images'
-import { Apparel, height, newArrival_Data, width } from '../../../Constant/constant'
+import { appfont } from '../../../../Constant/fonts'
+import { Icons } from '../../../../Constant/images'
+import { Apparel, height, newArrival_Data, width } from '../../../../Constant/constant'
 
 export default NewArrival = (props) => {
     const [activeIndex, setActiveIndex] = useState(0)
@@ -69,11 +69,13 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     header: {
-        alignItems: 'center'
+        alignItems: 'center',
+        marginTop: 40
     },
     headertxt: {
         fontFamily: appfont,
         fontSize: 25,
+        color: 'black'
     },
     diamond: {
         width: 150,
@@ -100,7 +102,8 @@ const styles = StyleSheet.create({
     apparelcontainer: {
         width: width * 0.47,
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        
     },
     apparelimage: {
         height: height * 0.3,
@@ -108,9 +111,11 @@ const styles = StyleSheet.create({
         resizeMode: 'contain'
     },
     rowFlatlist: {
-        width: width * 0.949,
-        height: height * 0.725,
-        alignItems: 'center'
+        width: width,
+        height: height * 0.75,
+        alignItems: 'center',
+        padding: 10,
+        // borderWidth: 1
     },
     appareltxt: {
         fontFamily: appfont,
@@ -124,13 +129,14 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         flexDirection: 'row',
         justifyContent: 'center',
-        marginVertical: 15,
+        marginVertical: 25,
         marginBottom: 45
     },
     expmrtxt: {
         fontFamily: appfont,
         fontSize: 20,
-        marginHorizontal: 10
+        marginHorizontal: 10,
+        color: "black"
     },
     expmrarw: {
         height: 20,

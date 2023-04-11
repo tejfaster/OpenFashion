@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react"
-import { View, ImageBackground, Text, FlatList, StyleSheet,TouchableOpacity, Dimensions } from 'react-native'
-import { Icons } from "../../../Constant/images"
-import { appfont } from "../../../Constant/fonts"
+import { View, ImageBackground, Text, FlatList, StyleSheet, TouchableOpacity, Dimensions } from 'react-native'
+import { Icons } from "../../../../Constant/images"
+import { appfont } from "../../../../Constant/fonts"
 
 const { width, height } = Dimensions.get('screen')
 
@@ -25,8 +25,8 @@ export default Carousel = (props) => {
                 showsHorizontalScrollIndicator={false}
                 onMomentumScrollEnd={ev => setActiveIndex(Math.floor(ev.nativeEvent.contentOffset.x / Math.floor(width * 0.949)))}
                 keyExtractor={item => item.id}
-                renderItem={({ item}) => {
-                    return (<View>
+                renderItem={({ item }) => {
+                    return (<View style={styles.subcontainer}>
                         <ImageBackground
                             source={item.image}
                             style={styles.image} >
@@ -50,12 +50,17 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: "center"
     },
+    subcontainer: {
+        width: width,
+        height: height * 0.7,
+        padding: 10
+    },
     image: {
         width: width * 0.95,
         height: height * 0.7,
         alignItems: 'center',
         justifyContent: "flex-end",
-        paddingBottom:10
+        paddingBottom: 10
     },
     dotContainer: {
         flexDirection: "row",
@@ -65,7 +70,7 @@ const styles = StyleSheet.create({
         width: 6,
         borderWidth: 1,
         borderRadius: 25,
-        margin: 10,        
+        margin: 10,
     },
     explore: {
         alignItems: 'center',
@@ -73,11 +78,12 @@ const styles = StyleSheet.create({
         height: 50,
         width: width * 0.5,
         backgroundColor: "rgba(0,0,0,0.3)",
-        borderRadius:50
+        borderRadius: 50,
+        marginBottom: 10
     },
-    collection:{
-        color:"white",
-        fontFamily:appfont,
-        fontSize:14
+    collection: {
+        color: "white",
+        fontFamily: appfont,
+        fontSize: 14
     }
 })

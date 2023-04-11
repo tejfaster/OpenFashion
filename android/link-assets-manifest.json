@@ -2,6 +2,14 @@
   "migIndex": 1,
   "data": [
     {
+      "path": "assets/fonts/BodoniModa-Italic-VariableFont_opsz,wght.ttf",
+      "sha1": "64bb137f070d8f75f573248031c94957c93fb30f"
+    },
+    {
+      "path": "assets/fonts/BodoniModa-VariableFont_opsz,wght.ttf",
+      "sha1": "f76bdf9e26b4d1f53e6baa53a46d1494f351c583"
+    },
+    {
       "path": "assets/fonts/TenorSans-Regular.ttf",
       "sha1": "3fcfd077a01cf370af03a9bff99f33ad0543fec5"
     }

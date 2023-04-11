@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text, StyleSheet, FlatList, TouchableOpacity, Image } from 'react-native'
-import { Icons } from '../../../Constant/images'
-import { brand, width } from '../../../Constant/constant'
+import { Icons } from '../../../../Constant/images'
+import { brand, width } from '../../../../Constant/constant'
 
 export default Brand = (props) => {
     return (
@@ -33,12 +33,12 @@ const styles = StyleSheet.create({
     diamond: {
         width: 150,
         height: 15,
-        marginVertical:10
+        marginVertical:15
     },
     brandimage: {
-        height: 50,
-        width: 100,
+        height: 40,
+        width: 80,
         resizeMode: 'contain',
-        marginHorizontal: 8
+        marginHorizontal: 15
     }
 })

@@ -54,6 +54,8 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>TenorSans-Regular.ttf</string>
+		<string>BodoniModa-Italic-VariableFont_opsz,wght.ttf</string>
+		<string>BodoniModa-VariableFont_opsz,wght.ttf</string>
 	</array>
 </dict>
 </plist>

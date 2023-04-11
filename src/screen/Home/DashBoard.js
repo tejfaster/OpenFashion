@@ -1,21 +1,25 @@
 import React from 'react'
 import { View, Text, TouchableOpacity, FlatList, ImageBackground, StyleSheet, ScrollView } from 'react-native'
 import Header from '../../Component/Header'
-import Carousel from './Component/Carousel'
-import NewArrival from './Component/NewArrival'
-import Brand from './Component/Brand'
+import Carousel from './Component/DashBoard/Carousel'
+import NewArrival from './Component/DashBoard/NewArrival'
+import Brand from './Component/DashBoard/Brand'
+import Collection from './Component/DashBoard/Collection'
+import JustForYou from './Component/DashBoard/JustForYou'
 
 export default DashBoard = () => {
 
     return (
         <View>
-            <View style={styles.header}>
-                <Header />
-            </View>
-            <ScrollView style={styles.subcontainer} showsVerticalScrollIndicator={false}>
-                <Carousel />
-                <NewArrival />
-                <Brand />
+            <Header />
+            <ScrollView showsVerticalScrollIndicator={false}>
+                <View style={styles.subcontainer} >
+                    <Carousel />
+                    <NewArrival />
+                    <Brand />
+                </View>
+                <Collection />
+                <JustForYou />
             </ScrollView>
         </View>
     )
@@ -23,10 +27,10 @@ export default DashBoard = () => {
 
 const styles = StyleSheet.create({
     header: {
-        position: "absolute",
+        // position: "absolute",
     },
     subcontainer: {
-        marginTop: 40,
-        marginHorizontal: 10
+        marginTop: 5,
+        // marginHorizontal: 10
     }
 })

@@ -15,6 +15,8 @@
 		7699B88040F8A987B510C191 /* libPods-OpenFashion-OpenFashionTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-OpenFashion-OpenFashionTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		AD83C9BC66A7406ABA84BD2E /* TenorSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6FE6C7F8BBC4DC8BF960FE5 /* TenorSans-Regular.ttf */; };
+		A7EBD89CB22347EE92EA8188 /* BodoniModa-Italic-VariableFont_opsz,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A910F6FE3F64B63AB3D7B4C /* BodoniModa-Italic-VariableFont_opsz,wght.ttf */; };
+		6ADB84540A9F4CEE861E2959 /* BodoniModa-VariableFont_opsz,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7995C98C5ADF484AB57AA935 /* BodoniModa-VariableFont_opsz,wght.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		89C6BE57DB24E9ADA2F236DE /* Pods-OpenFashion-OpenFashionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenFashion-OpenFashionTests.release.xcconfig"; path = "Target Support Files/Pods-OpenFashion-OpenFashionTests/Pods-OpenFashion-OpenFashionTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		C6FE6C7F8BBC4DC8BF960FE5 /* TenorSans-Regular.ttf */ = {isa = PBXFileReference; name = "TenorSans-Regular.ttf"; path = "../assets/fonts/TenorSans-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8A910F6FE3F64B63AB3D7B4C /* BodoniModa-Italic-VariableFont_opsz,wght.ttf */ = {isa = PBXFileReference; name = "BodoniModa-Italic-VariableFont_opsz,wght.ttf"; path = "../assets/fonts/BodoniModa-Italic-VariableFont_opsz,wght.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7995C98C5ADF484AB57AA935 /* BodoniModa-VariableFont_opsz,wght.ttf */ = {isa = PBXFileReference; name = "BodoniModa-VariableFont_opsz,wght.ttf"; path = "../assets/fonts/BodoniModa-VariableFont_opsz,wght.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +159,8 @@
 			isa = "PBXGroup";
 			children = (
 				C6FE6C7F8BBC4DC8BF960FE5 /* TenorSans-Regular.ttf */,
+				8A910F6FE3F64B63AB3D7B4C /* BodoniModa-Italic-VariableFont_opsz,wght.ttf */,
+				7995C98C5ADF484AB57AA935 /* BodoniModa-VariableFont_opsz,wght.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -257,6 +263,8 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				AD83C9BC66A7406ABA84BD2E /* TenorSans-Regular.ttf in Resources */,
+				A7EBD89CB22347EE92EA8188 /* BodoniModa-Italic-VariableFont_opsz,wght.ttf in Resources */,
+				6ADB84540A9F4CEE861E2959 /* BodoniModa-VariableFont_opsz,wght.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

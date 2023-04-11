@@ -67,7 +67,7 @@ export const Icons = {
     location:require("../assets/image/Location.png"),
     logo:require("../assets/image/Logo.png"),
     luxury:require("../assets/image/Luxury.png"),
-    menu:require("../assets/image/Menu.png"),
+    menus:require("../assets/image/Menu.png"),
     oblong_bag:require("../assets/image/Oblong_bag.png"),
     october:require("../assets/image/October.png"),
     openfashion:require("../assets/image/Openfashion.png"),

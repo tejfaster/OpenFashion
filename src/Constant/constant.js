@@ -3,8 +3,6 @@ import { Icons } from "./images"
 
 export const { width, height } = Dimensions.get('screen')
 
-
-
 export const newArrival_Data = [
     { id: 1, title: "All" },
     { id: 2, title: "Cardigan" },
@@ -14,12 +12,12 @@ export const newArrival_Data = [
 ]
 
 export const brand = [
-    { id: 1, title: "prada", image:Icons.prada },
-    { id: 2, title: "Burberry",image:Icons.burberry_logo },
-    { id: 3, title: "Boss" ,image:Icons.boss_logo },
-    { id: 4, title: "Cartier",image:Icons.catier_logo },
-    { id: 5, title: "Gucci" ,image:Icons.gucci},
-    { id: 6, title: "Tiffny & co",image:Icons.tiffany_and_co },
+    { id: 1, title: "prada", image: Icons.prada },
+    { id: 2, title: "Burberry", image: Icons.burberry_logo },
+    { id: 3, title: "Boss", image: Icons.boss_logo },
+    { id: 4, title: "Cartier", image: Icons.catier_logo },
+    { id: 5, title: "Gucci", image: Icons.gucci },
+    { id: 6, title: "Tiffny & co", image: Icons.tiffany_and_co },
 ]
 
 
@@ -36,5 +34,11 @@ export const Apparel = [
     { id: 9, type: "Top", image: Icons.burberry_top, collection: [{ id: 9.1, image: Icons.burberry_top_1 }] },
     { id: 10, type: "Top", image: Icons.check_print_burberry, collection: [{ id: 10.1, image: Icons.check_print_burberry }, { id: 10.2, image: Icons.check_print_burberry_1 }, { id: 10.3, image: Icons.check_print_burberry_2 }] },
     { id: 11, type: "One_Piece", image: Icons.burberry_one_piece, collection: [{ id: 11.1, image: Icons.burberry_one_piece }, { id: 11.2, image: Icons.burberry_one_piece_1 }] },
+]
 
+export const justForYou = [
+    { id: 1, description: "11WDN Green burberry cardigan", image: Icons.green_cardigan },
+    { id: 2, description: "Staple Gucci Cardigan 457EQ", image: Icons.staple_G_cardigan_2 },
+    { id: 3, description: "BurBerry harris tweed three button", image: Icons.harris_tweed_three_button},
+    { id: 4, description: "Cartier goggle cashmere blend", image: Icons.cashmere_blend},
 ]
