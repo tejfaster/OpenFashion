@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, ImageBackground, Image,TouchableOpacity } from 'react-native'
+import { View, Text, StyleSheet, ImageBackground, Image, TouchableOpacity } from 'react-native'
 import { Icons } from "../../../../Constant/images";
 import { height, width } from "../../../../Constant/constant";
 import { Bodoni_Italic, appfont } from "../../../../Constant/fonts";
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     },
     colconatiner: {
         alignSelf: 'flex-end',
-
+        marginBottom:height * 0.04
     },
     season: {
         fontFamily: Bodoni_Italic,
@@ -61,21 +61,20 @@ const styles = StyleSheet.create({
     },
     colconatiner2: {
         alignSelf: 'flex-end',
-        marginTop: 50,
-        marginRight: 40
+        marginTop: height * 0.08,
+        marginRight: width * 0.01,
+
     },
     colimage2: {
         margin: 30,
         width: width * 0.85,
         height: height * 0.5,
         resizeMode: 'contain',
-        // justifyContent: 'center'
     },
     season2: {
         fontFamily: Bodoni_Italic,
         color: "grey",
         fontSize: 50,
-        marginTop: 20
     },
     coltxt2: {
         fontFamily: appfont,
@@ -88,5 +87,6 @@ const styles = StyleSheet.create({
         height: height * 0.218,
         width: width,
         resizeMode: 'contain'
-    }
+    },
+    
 }) 

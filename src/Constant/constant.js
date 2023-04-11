@@ -7,7 +7,7 @@ export const newArrival_Data = [
     { id: 1, title: "All" },
     { id: 2, title: "Cardigan" },
     { id: 3, title: "Top" },
-    { id: 4, title: "One Picec" },
+    { id: 4, title: "One Piece" },
     { id: 5, title: "Bag" }
 ]
 
@@ -37,8 +37,17 @@ export const Apparel = [
 ]
 
 export const justForYou = [
-    { id: 1, description: "11WDN Green burberry cardigan", image: Icons.green_cardigan },
-    { id: 2, description: "Staple Gucci Cardigan 457EQ", image: Icons.staple_G_cardigan_2 },
-    { id: 3, description: "BurBerry harris tweed three button", image: Icons.harris_tweed_three_button},
-    { id: 4, description: "Cartier goggle cashmere blend", image: Icons.cashmere_blend},
+    { id: 1, description: "11WDN Green burberry cardigan", image: Icons.green_cardigan,price: "179" },
+    { id: 2, description: "Staple Gucci Cardigan 457EQ", image: Icons.oblong_bag,price:"149" },
+    { id: 3, description: "BurBerry harris tweed three button", image: Icons.harris_tweed_three_button,price:"199" },
+    { id: 4, description: "Cartier goggle cashmere blend", image: Icons.cashmere_blend,price:"189" },
+]
+
+export const trending = [
+    {id:1,title:"#2023"},
+    {id:2,title:"#spring"},
+    {id:3,title:"#summer"},
+    {id:4,title:"#fall"},
+    {id:5,title:"#openfashion"},
+    {id:6,title:"#elite"},
 ]

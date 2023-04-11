@@ -38,6 +38,7 @@ const styles = StyleSheet.create({
     logo: {
         height: 37,
         width: 110,
+        resizeMode: 'contain'
     },
     subcontainer: {
         flexDirection: "row",
