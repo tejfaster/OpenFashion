@@ -9,7 +9,8 @@ import JustForYou from './Component/DashBoard/JustForYou'
 import { Icons } from '../../Constant/images'
 import { appfont } from '../../Constant/fonts'
 import { height, trending, width } from '../../Constant/constant'
-import Footer from './Component/DashBoard/Footer'
+import Footer from '../../Component/Footer'
+
 
 export default DashBoard = () => {
 

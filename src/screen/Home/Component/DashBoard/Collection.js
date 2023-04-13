@@ -3,26 +3,29 @@ import { View, Text, StyleSheet, ImageBackground, Image, TouchableOpacity } from
 import { Icons } from "../../../../Constant/images";
 import { height, width } from "../../../../Constant/constant";
 import { Bodoni_Italic, appfont } from "../../../../Constant/fonts";
+import CtsButton from "../../../../Component/CtsButton";
 
 export default Collection = (props) => {
     return (
         <View>
             <Text style={styles.header}>COLLECTIONS</Text>
+            <TouchableOpacity>
             <ImageBackground source={Icons.collection} style={styles.colimage1}>
                 <View style={styles.colconatiner} >
                     <Text style={styles.season}>Season</Text>
                     <Text style={styles.coltxt}>COLLECTION</Text>
                 </View>
             </ImageBackground>
+            </TouchableOpacity>
+            <TouchableOpacity>
             <ImageBackground source={Icons.collection_part} style={styles.colimage2}>
                 <View style={styles.colconatiner2} >
                     <Text style={styles.season2}>Summer</Text>
                     <Text style={styles.coltxt2}>COLLECTION</Text>
                 </View>
             </ImageBackground>
-            <TouchableOpacity onPress={props.onPress}>
-                <Image source={Icons.video} style={styles.video} />
             </TouchableOpacity>
+            <CtsButton src={Icons.video} Imgstyle={styles.video}/>
         </View>
     )
 }

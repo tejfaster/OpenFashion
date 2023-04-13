@@ -1,8 +1,8 @@
 import React from "react";
 import { View, Text, StyleSheet, Image } from 'react-native'
-import CtsButton from "../../../../Component/CtsButton";
-import { Icons } from "../../../../Constant/images";
-import { Bodoni_Italic, appfont } from "../../../../Constant/fonts";
+import CtsButton from "./CtsButton";
+import { Icons } from "../Constant/images";
+import { Bodoni_Italic, appfont } from "../Constant/fonts";
 
 export default Footer = () => {
     return (
@@ -14,8 +14,8 @@ export default Footer = () => {
             </View>
             <Image source={Icons.diamond_line} style={styles.diamond} />
             <Text style={styles.supporttxt}>@Support</Text>
-            <Text style={styles.supporttxt}>tejfaster55@gmail.com</Text>
-            <Text style={styles.supporttxt}>+91 770 182 7831</Text>
+            <Text style={styles.supporttxt}>OpenFashion@gmail.com</Text>
+            <Text style={styles.supporttxt}>+91 8459 5461 58</Text>
             <Image source={Icons.diamond_line} style={styles.diamond} />
             <View style={styles.footer}>
                 <CtsButton txt="About" Txtstyle={styles.supporttxt1} />

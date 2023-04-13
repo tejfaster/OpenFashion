@@ -3,6 +3,7 @@ import { View, Text, FlatList, StyleSheet, Image } from "react-native";
 import { appfont } from "../../../../Constant/fonts";
 import { Icons } from "../../../../Constant/images";
 import { height, justForYou, width } from "../../../../Constant/constant";
+import CtsButton from "../../../../Component/CtsButton";
 
 export default JustForYou = () => {
     const [activeIndex, setActiveIndex] = useState(0)
@@ -12,14 +13,14 @@ export default JustForYou = () => {
             <Image source={Icons.diamond_line} style={styles.diamond} />
             <FlatList
                 data={justForYou}
-                horizontal           
+                horizontal
                 showsHorizontalScrollIndicator={false}
-                onMomentumScrollEnd={ev => setActiveIndex(Math.floor(Math.floor(ev.nativeEvent.contentOffset.x)/Math.floor(width * 0.7 )))}
+                onMomentumScrollEnd={ev => setActiveIndex(Math.floor(Math.floor(ev.nativeEvent.contentOffset.x) / Math.floor(width * 0.7)))}
                 keyExtractor={item => item.id}
                 renderItem={({ item }) => {
                     return (
                         <View style={styles.jtfycontainer}>
-                            <Image source={item.image} style={styles.jtfyimage} />
+                            <CtsButton src={item.image} Imgstyle={styles.jtfyimage} />
                             <Text style={styles.jtfytxts}>{item.description}</Text>
                             <Text style={styles.jtfyprice}>${item.price}</Text>
                         </View>

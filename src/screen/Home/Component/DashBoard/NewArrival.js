@@ -17,11 +17,11 @@ export default NewArrival = (props) => {
                     showsVerticalScrollIndicator={false}
                     renderItem={({ item }) => {
                         return (
-                            <View style={styles.apparelcontainer}>
+                            <TouchableOpacity style={styles.apparelcontainer}>
                                 <Image source={item.image} style={styles.apparelimage} />
                                 <Text style={styles.appareltxt}>{item.description}</Text>
                                 <Text style={styles.apparelprice}>${item.price}</Text>
-                            </View>
+                            </TouchableOpacity>
                         )
                     }}
                 />
@@ -41,7 +41,7 @@ export default NewArrival = (props) => {
                         return (
                             <View style={styles.arrivalheader} key={item.id}>
                                 <Text style={[styles.arrivalItem, { color: activeIndex === index ? "black" : "grey" }]}>{item.title}</Text>
-                                <View style={[styles.arrivaldot, { backgroundColor: activeIndex === index ? "gold" : "white", borderColor: activeIndex === index ? "gold" : "grey" }]} />
+                                <View style={[styles.arrivaldot, { backgroundColor: activeIndex === index ? "darkorange" : "white", borderColor: activeIndex === index ? "darkorange" : "grey" }]} />
                             </View>
                         )
                     })
@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
         width: width * 0.47,
         alignItems: 'center',
         justifyContent: 'center',
-        
+
     },
     apparelimage: {
         height: height * 0.3,
@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
     },
     apparelprice: {
         fontFamily: appfont,
-        color: "gold"
+        color: "darkorange"
     },
     expmrButton: {
         alignItems: 'center',
