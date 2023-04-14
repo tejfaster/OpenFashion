@@ -96,6 +96,9 @@ export const Icons = {
     up: require("../assets/image/Up.png"),
     video: require("../assets/image/Video.png"),
     voucher: require("../assets/image/Voucher.png"),
+    white_heart: require("../assets/image/white_heart.png"),
+    white_Plus: require("../assets/image/White_Plus.png"),
     youtube: require("../assets/image/youtube.png"),
+    zoom: require("../assets/image/zoom.png"),
 }
 

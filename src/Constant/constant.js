@@ -120,3 +120,10 @@ export const pagination = [
     { id: 4 },
     { id: 5 }
 ]
+
+export const banner = [
+    { id: 1, image: Icons.banner_1 },
+    { id: 2, image: Icons.cardigan },
+    { id: 3, image: Icons.cashmere_blend },
+    { id: 4, image: Icons.silver_cardigan },
+]

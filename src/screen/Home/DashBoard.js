@@ -1,26 +1,27 @@
 import React from 'react'
 import { View, Text, TouchableOpacity, FlatList, ImageBackground, StyleSheet, ScrollView, Image } from 'react-native'
 import Header from '../../Component/Header'
-import Carousel from './Component/DashBoard/Carousel'
+import Carousel from '../../Component/Carousel'
 import NewArrival from './Component/DashBoard/NewArrival'
 import Brand from './Component/DashBoard/Brand'
 import Collection from './Component/DashBoard/Collection'
 import JustForYou from './Component/DashBoard/JustForYou'
 import { Icons } from '../../Constant/images'
 import { appfont } from '../../Constant/fonts'
-import { height, trending, width } from '../../Constant/constant'
+import { banner, height, trending, width } from '../../Constant/constant'
 import Footer from '../../Component/Footer'
 
-
-export default DashBoard = () => {
-
+export default DashBoard = ({ navigation }) => {
     return (
         <View style={{ flex: 1 }}>
             <Header />
             <ScrollView showsVerticalScrollIndicator={false}>
                 <View style={styles.subcontainer} >
-                    <Carousel />
-                    <NewArrival />
+                    <Carousel data={banner} explore />
+                    <NewArrival 
+                    dot
+                    title="NEW ARRIVAl"
+                    exploreButtton={() => navigation.navigate("Category")} />
                     <Brand />
                 </View>
                 <Collection />

@@ -17,7 +17,7 @@ export default NewArrival = (props) => {
                     showsVerticalScrollIndicator={false}
                     renderItem={({ item }) => {
                         return (
-                            <TouchableOpacity style={styles.apparelcontainer}>
+                            <TouchableOpacity style={styles.apparelcontainer} onPress={props.cardButton}>
                                 <Image source={item.image} style={styles.apparelimage} />
                                 <Text style={styles.appareltxt}>{item.description}</Text>
                                 <Text style={styles.apparelprice}>${item.price}</Text>
@@ -32,12 +32,12 @@ export default NewArrival = (props) => {
     return (
         <View style={styles.container}>
             <View style={styles.header}>
-                <Text style={styles.headertxt}>NEW ARRIVAL</Text>
+                <Text style={styles.headertxt}>{props.title}</Text>
                 <Image source={Icons.diamond_line} style={styles.diamond} />
             </View>
             <View style={styles.arrivalcontainer}>
                 {
-                    newArrival_Data.map((item, index) => {
+                    props.dot && newArrival_Data.map((item, index) => {
                         return (
                             <View style={styles.arrivalheader} key={item.id}>
                                 <Text style={[styles.arrivalItem, { color: activeIndex === index ? "black" : "grey" }]}>{item.title}</Text>
@@ -56,10 +56,13 @@ export default NewArrival = (props) => {
                 onMomentumScrollEnd={ev => setActiveIndex(Math.floor(ev.nativeEvent.contentOffset.x / Math.floor(width * 0.949)))}
                 renderItem={({ item, index }) => renderItem(item, index)}
             />
-            <TouchableOpacity onPress={props.onPress} style={styles.expmrButton}>
-                <Text style={styles.expmrtxt}>Explore More</Text>
-                <Image source={Icons.forward_Arrow} style={styles.expmrarw} />
-            </TouchableOpacity>
+            {
+                props.exploreButtton && <TouchableOpacity onPress={props.exploreButtton} style={styles.expmrButton}>
+                    <Text style={styles.expmrtxt}>Explore More</Text>
+                    <Image source={Icons.forward_Arrow} style={styles.expmrarw} />
+                </TouchableOpacity>
+            }
+
         </View>
     )
 }
@@ -112,7 +115,7 @@ const styles = StyleSheet.create({
     },
     rowFlatlist: {
         width: width,
-        height: height * 0.75,
+        height: height * 0.74,
         alignItems: 'center',
         padding: 10,
         // borderWidth: 1

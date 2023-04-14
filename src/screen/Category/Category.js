@@ -9,7 +9,7 @@ import CtsButton from "../../Component/CtsButton";
 import { Icons } from "../../Constant/images";
 import Footer from "../../Component/Footer";
 
-export default Category = () => {
+export default Category = ({ navigation }) => {
     const [active, setActive] = useState(1)
     const [activePage, setActivepage] = useState(1)
 
@@ -20,7 +20,6 @@ export default Category = () => {
             <Header />
             <ScrollView
                 style={styles.container}>
-
                 <View style={styles.contcent}>
                     <Text style={styles.toitemtxt}>4500 APPAREL</Text>
                     <View style={styles.filcent}>
@@ -50,6 +49,9 @@ export default Category = () => {
                         return (
                             <View style={styles.cardContainer}>
                                 <TouchableOpacity
+                                    onPress={() => navigation.navigate("Product", {
+                                        data: item
+                                    })}
                                     style={{ flexDirection: active === 1 ? "row" : "column" }}>
                                     <ImageBackground
                                         resizeMode="contain"
@@ -59,7 +61,7 @@ export default Category = () => {
                                             width: active === 3 ? width * 0.95 : width * 0.45
                                         }]}>
                                         {
-                                            active !== 1 && <CtsButton src={Icons.heart} Imgstyle={styles.heart} />
+                                            active !== 1 && <CtsButton src={Icons.orange_line_heart} Imgstyle={styles.heart} />
                                         }
                                     </ImageBackground>
                                     <View style={{ margin: active !== 2 && active !== 3 ? 15 : 0, width: active === 1 ? width * 0.45 : active === 2 ? width * 0.5 : width * 0.9 }}>
@@ -87,8 +89,7 @@ export default Category = () => {
                                                         }
                                                     </View>
                                                     <CtsButton
-                                                        src={Icons.heart}
-                                                        // Imgstyle={{ height: 26, width: 26 }} 
+                                                        src={Icons.orange_line_heart}
                                                         Imgstyle={styles.heart}
                                                     />
                                                 </View>
